@@ -101,7 +101,7 @@ function App() {
             ? country.data.map((item) => (
                 <Item key={item.name.common} obj={item} />
               ))
-            : <img className="loading1" src={error}/>}
+            : ''}
         </ul>
       </div>
     </div>
