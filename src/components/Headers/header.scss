@@ -1,0 +1,25 @@
+.site-header {
+  background-color:#fff;
+}
+
+.site-header__title {
+  margin: 0;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  color: #111517;
+}
+
+.dark-mode__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #111517;
+}
+
+.country-img {
+  width: 100%;
+  min-height: 150px;
+  max-height: 150px;
+}
