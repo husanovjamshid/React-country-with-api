@@ -1,9 +1,10 @@
 import "./item.scss";
+import { Link } from "react-router-dom";
 
 export let Item = ({ obj }) => {
   return (
     <li className="col-md-3">
-      <div className="card">
+      <Link to={"/item/"+obj.name.common} className="card">
         <img
           src={obj.flags.svg}
           width="100%"
@@ -17,7 +18,7 @@ export let Item = ({ obj }) => {
           <p className="my-1"> <strong>Region:</strong> {obj.region} </p>
           <p><strong>Capital: </strong> {obj?.capital}</p>
         </div>
-      </div>
+      </Link>
     </li>
   );
 };
