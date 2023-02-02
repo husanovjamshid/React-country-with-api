@@ -6,8 +6,8 @@ import search from ".././src/assets/img/search.svg";
 import loading from ".././src/assets/img/loading1.gif";
 import error from ".././src/assets/img/404.png";
 import { Single } from "./components/pages/Single";
-import { Routes, Route } from "react-router-dom";
-import { Error } from "./components/pages/Error";
+import { Routes, Route, Outlet } from "react-router-dom";
+
 import axios from "axios";
 
 function App() {
@@ -118,9 +118,8 @@ function App() {
               </>
             }
           />
-          <Route path="/item/:names" element={<Single />} />
-          <Route path="*" element={<Error />} />
         </Routes>
+        <Outlet />
       </div>
     </div>
   );
