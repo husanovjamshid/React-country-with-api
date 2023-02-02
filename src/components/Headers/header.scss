@@ -1,6 +1,6 @@
-.site-header {
-  background-color:#fff;
-}
+// .site-header {
+//   background-color:#fff;
+// }
 
 .site-header__title {
   margin: 0;
@@ -22,4 +22,10 @@
   width: 100%;
   min-height: 150px;
   max-height: 150px;
+}
+
+.dark-mode {
+  outline: none;
+  background-color: transparent;
+  border: none;
 }

@@ -1,10 +1,9 @@
 import back from "../../assets/img/call-made.svg";
-import belgium from "../../assets/img/belgium.png";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import loading from "../../assets/img/loading1.gif";
 import { Link } from "react-router-dom";
-// import axios from "axios";
+
 
 export const Single = () => {
   let [getCountry, setGetCountry] = useState({
@@ -46,17 +45,17 @@ export const Single = () => {
       </a>
 
       {getCountry.data.map((item) => (
-        <div className="d-flex align-items-center justify-content-between pb-5">
-          <div className="div">
+        <div className="row d-flex align-items-center justify-content-evenly pb-5">
+          <div className="single__img col-12 col-sm-12  col-md-5 ">
             <img
-              width="560px"
+              // width="560px"
               height="401px"
               className="rounded-3"
               src={item.flags.svg}
               alt=""
             />
           </div>
-          <div className="country__info__right">
+          <div className="country__info__right col-12 col-sm-12  col-md-7">
             <div className="country__wrap ">
               <h3 className="country__name">{item.name?.common}</h3>
               <div className="row">

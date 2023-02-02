@@ -1,10 +1,10 @@
 import "./item.scss";
 import { Link } from "react-router-dom";
 
-export let Item = ({ obj }) => {
+export let Item = ({ obj, theme }) => {
   return (
     <li className="col-md-3">
-      <Link to={"/item/"+obj.name.common} className="card">
+      <Link to={"/item/"+obj.name.common} className={`card ${theme}`}>
         <img
           src={obj.flags.svg}
           width="100%"

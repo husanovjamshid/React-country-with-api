@@ -5,9 +5,9 @@ import { useEffect, useState, useRef } from "react";
 import search from ".././src/assets/img/search.svg";
 import loading from ".././src/assets/img/loading1.gif";
 import error from ".././src/assets/img/404.png";
-import { Single } from "./components/pages/Single";
+// import { Single } from "./components/pages/Single";
 import { Routes, Route, Outlet } from "react-router-dom";
-
+import "./App.scss";
 import axios from "axios";
 
 function App() {
@@ -61,9 +61,12 @@ function App() {
     inputValue.current.value = "";
   };
 
+  let [theme, setTheme] = useState(localStorage.getItem('theme') || "light");
+  localStorage.setItem('theme', theme)
+
   return (
-    <div className="App">
-      <Header />
+    <div className={theme}>
+      <Header theme={theme} setTheme={setTheme} />
       <div className="container">
         <Routes>
           <Route
@@ -111,7 +114,7 @@ function App() {
                 <ul className="row gy-4 mt-4 d-flex list-unstyled">
                   {country.data.length
                     ? country.data.map((item) => (
-                        <Item key={item.name.common} obj={item} />
+                        <Item theme={theme} key={item.name.common} obj={item} />
                       ))
                     : ""}
                 </ul>

@@ -24,10 +24,27 @@ body {
   padding: 15px 0 15px 15px;
 }
 
+.dark .input {
+  background-color: #2b3844;
+  color: #fff;
+}
+
+.dark input::placeholder {
+  color: #fff;
+}
+.dark h3 {
+  color: #fff;
+}
+
 .form-select {
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
+}
+
+.dark .form-select {
+  background-color: #2b3844;
+  color: #fff;
 }
 
 @media only screen and (max-width: 576px) {
@@ -118,4 +135,9 @@ a {
 .country__info__right {
   width: 100%;
   max-width: 470px;
+}
+
+.single__img img {
+  width: 100%;
+  max-width: 559px;
 }
